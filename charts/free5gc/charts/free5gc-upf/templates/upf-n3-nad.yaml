@@ -33,7 +33,7 @@ spec:
             "type": "static",
             "routes": [
               {
-                "dst": "0.0.0.0/0",
+                "dst": "{{ .Values.global.n3network.subnetIP }}/{{ .Values.global.n3network.cidr }}",
                 "gw": "{{ .Values.global.n3network.gatewayIP }}"
               }
             ]
