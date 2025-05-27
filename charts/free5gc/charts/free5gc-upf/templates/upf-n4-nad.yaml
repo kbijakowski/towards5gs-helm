@@ -31,12 +31,7 @@ spec:
 {{- end }}
           "ipam": {
             "type": "static",
-            "routes": [
-              {
-                "dst": "{{ .Values.global.n4network.subnetIP }}/{{ .Values.global.n4network.cidr }}",
-                "gw": "{{ .Values.global.n4network.gatewayIP }}"
-              }
-            ]
+            "routes": []
           }
         }
 {{- if eq .Values.global.n4network.type "macvlan" -}}
